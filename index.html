@@ -19,24 +19,14 @@
         <div class="title">Bill total</div>
         <div class="inputContainer">
           <span>$</span>
-          <input
-            onkeyup="calculateBill()"
-            type="text"
-            id="billTotalInput"
-            placeholder="0.00"
-          />
+          <input class="form-control" type="text" id="billTotalInput" placeholder="0.00" />
         </div>
       </div>
       <div class="container">
         <div class="title">Tip</div>
         <div class="inputContainer">
           <span>%</span>
-          <input
-            onkeyup="calculateBill()"
-            type="text"
-            id="tipInput"
-            placeholder="10"
-          />
+          <input class="form-control" type="text" id="tipInput" placeholder="10" />
         </div>
       </div>
       <div class="container" id="bottom">
@@ -44,13 +34,13 @@
           <div class="title">People</div>
           <div class="controls">
             <span class="buttonContainer">
-              <button class="splitButton" onclick="increasePeople()">
+              <button class="splitButton add-people">
                 <span class="buttonText">+</span>
               </button>
             </span>
             <span class="splitAmount" id="numberOfPeople">1</span>
             <span class="buttonContainer">
-              <button class="splitButton" onclick="decreasePeople()">
+              <button class="splitButton minus-people">
                 <span class="buttonText">-</span>
               </button>
             </span>
