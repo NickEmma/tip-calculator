@@ -1,3 +1,6 @@
+const inputsEl = document.querySelectorAll('.form-control');
+const addPeopleEl = document.querySelector('.add-people');
+const minusPeopleEl = document.querySelector('.minus-people');
 const billInput = document.getElementById('billTotalInput');
 const tipInput = document.getElementById('tipInput');
 const numberOfPeopleDiv = document.getElementById('numberOfPeople');
@@ -23,9 +26,12 @@ const increasePeople = () => {
 const decreasePeople = () => {
   if (numberOfPeople <= 1) {
     throw 'Hey! You cannot have less than 1 person!';
-    return;
   }
   numberOfPeople -= 1;
   numberOfPeopleDiv.innerText = numberOfPeople;
   calculateBill();
 };
+
+inputsEl.forEach((inp) => inp.addEventListener('keyup', calculateBill));
+addPeopleEl.addEventListener('click', increasePeople);
+minusPeopleEl.addEventListener('click', decreasePeople);
